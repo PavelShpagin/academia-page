@@ -3,93 +3,97 @@
  * Premium Interactions
  */
 
-(function() {
-    'use strict';
+(function () {
+  "use strict";
 
-    const nav = document.getElementById('nav');
-    const navToggle = document.getElementById('navToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+  const nav = document.getElementById("nav");
+  const navToggle = document.getElementById("navToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener("DOMContentLoaded", init);
 
-    function init() {
-        initNavigation();
-        initMobileMenu();
-        initSmoothScroll();
-    }
+  function init() {
+    initNavigation();
+    initMobileMenu();
+    initSmoothScroll();
+  }
 
-    /**
-     * Premium navigation with smooth transitions
-     */
-    function initNavigation() {
-        let ticking = false;
-        let lastScrollY = 0;
-        
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    const scrollY = window.scrollY;
-                    
-                    // Add scrolled class
-                    nav.classList.toggle('scrolled', scrollY > 80);
-                    
-                    lastScrollY = scrollY;
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }, { passive: true });
-    }
+  /**
+   * Premium navigation with smooth transitions
+   */
+  function initNavigation() {
+    let ticking = false;
+    let lastScrollY = 0;
 
-    /**
-     * Mobile menu with smooth open/close
-     */
-    function initMobileMenu() {
-        navToggle.addEventListener('click', () => {
-            const isActive = mobileMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-            document.body.classList.toggle('no-scroll', isActive);
-        });
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
 
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
+            // Add scrolled class
+            nav.classList.toggle("scrolled", scrollY > 80);
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeMobileMenu();
-        });
-    }
+            lastScrollY = scrollY;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+  }
 
-    function closeMobileMenu() {
-        mobileMenu.classList.remove('active');
-        navToggle.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-    }
+  /**
+   * Mobile menu with smooth open/close
+   */
+  function initMobileMenu() {
+    navToggle.addEventListener("click", () => {
+      const isActive = mobileMenu.classList.toggle("active");
+      navToggle.classList.toggle("active");
+      document.body.classList.toggle("no-scroll", isActive);
+    });
 
-    /**
-     * Smooth scroll with easing
-     */
-    function initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
+    document.querySelectorAll(".mobile-link").forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
 
-                e.preventDefault();
-                const target = document.querySelector(href);
-                
-                if (target) {
-                    const offset = nav.offsetHeight + 20;
-                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                    
-                    window.scrollTo({ 
-                        top, 
-                        behavior: 'smooth' 
-                    });
-                    closeMobileMenu();
-                }
-            });
-        });
-    }
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobileMenu();
+    });
+  }
 
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("active");
+    navToggle.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  }
+
+  /**
+   * Smooth scroll with easing
+   */
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        if (href === "#") return;
+
+        e.preventDefault();
+        const target = document.querySelector(href);
+
+        if (target) {
+          const offset = nav.offsetHeight + 20;
+          const top =
+            target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top,
+            behavior: "smooth",
+          });
+          closeMobileMenu();
+        }
+      });
+    });
+  }
 })();
