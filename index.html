@@ -3,18 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Академія - Optical Positioning Systems для безпілотних систем. GPS-free навігація та стабілізація."
-    />
+    <meta name="description" content="Академія - Optical Positioning Systems для безпілотних систем. GPS-free навігація та стабілізація." />
     <title>Академія | Optical Positioning Systems</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -54,12 +48,8 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-bg">
-        <img
-          src="assets/hero-drone.png"
-          alt="Optical Positioning System"
-          class="hero-img"
-        />
-        <div class="hero-gradient"></div>
+        <img src="assets/hero-drone.png" alt="Optical Positioning System" class="hero-img" />
+        <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
         <span class="hero-tagline">OPTICAL POSITIONING SYSTEMS</span>
@@ -69,28 +59,20 @@
     <!-- Mission Section -->
     <section class="section mission" id="mission">
       <div class="container">
-        <div class="mission-grid">
-          <div class="mission-content">
+        <div class="mission-layout">
+          <div class="mission-text">
             <h2 class="mission-title">НАША МІСІЯ</h2>
-            <p class="mission-headline">
-              Наша місія — зупинити й завершити війну, зберігши життя військових
-              і цивільних.
+            <p class="mission-main">
+              Наша місія — зупинити й завершити війну, зберігши життя військових і цивільних.
             </p>
-            <p class="mission-text">
-              Ми створюємо рішення автоматизації для дронових технологій, щоб
-              робота з ними була точнішою, швидшою, надійнішою — і безпечнішою
-              для людей, які їх застосовують.
+            <p class="mission-sub">
+              Ми створюємо рішення автоматизації для дронових технологій, щоб робота з ними була точнішою, швидшою, надійнішою — і безпечнішою для людей, які їх застосовують.
             </p>
           </div>
-          <div class="mission-action">
-            <a href="#products" class="btn-products">
-              <span>НАШІ ПРОДУКТИ</span>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
+          <div class="mission-cta">
+            <a href="#products" class="btn-primary">
+              НАШІ ПРОДУКТИ
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
@@ -102,76 +84,61 @@
     <!-- Applications Section -->
     <section class="section applications" id="applications">
       <div class="container">
-        <h2 class="section-title">ЗАСТОСУВАННЯ</h2>
+        <h2 class="section-heading">ЗАСТОСУВАННЯ</h2>
 
-        <div class="app-grid">
-          <!-- Card 1: Stabilization -->
-          <article class="app-card">
-            <div class="app-card-media">
+        <div class="applications-intro">
+          <p>Ми розробляємо оптичну стабілізацію та навігацію по картах на її основі — щоб дрони стабільно утримували позицію, тримали орієнтир і виконували задачу точніше в умовах відсутності GPS та інших складних обмежень.</p>
+          <p>Наш підхід підсилює доступні платформи й зменшує залежність від дорогих "преміум" дронів — даючи надійне, безпечне та доступне за ціною рішення. Сфери застосування: ретранслятори зв'язку, точні бомбери, а в подальшому — автоматичні камікадзе, що працюють за заданою місією.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-image">
               <img src="assets/stabx.png" alt="Стабілізація" />
             </div>
-            <div class="app-card-content">
-              <div class="app-card-header">
-                <div class="app-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5" />
-                    <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5" />
-                    <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                  </svg>
-                </div>
-                <h3 class="app-card-title">СТАБІЛІЗАЦІЯ</h3>
+            <div class="card-body">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
               </div>
-              <p class="app-card-desc">
-                Стабільне наведення і керування дроном для снайдзавдань.
-              </p>
+              <h3 class="card-title">СТАБІЛІЗАЦІЯ</h3>
+              <p class="card-desc">Стабільне наведення і керування дроном для снайдзавдань.</p>
             </div>
           </article>
 
-          <!-- Card 2: Navigation -->
-          <article class="app-card">
-            <div class="app-card-media">
+          <article class="card">
+            <div class="card-image">
               <img src="assets/navix.png" alt="Навігація" />
             </div>
-            <div class="app-card-content">
-              <div class="app-card-header">
-                <div class="app-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M8 12h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M9.5 10.5l-3-3M14.5 10.5l3-3M9.5 13.5l-3 3M14.5 13.5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                    <rect x="10" y="10" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5" />
-                    <circle cx="6" cy="6" r="2" stroke="currentColor" stroke-width="1.5" />
-                    <circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.5" />
-                    <circle cx="6" cy="18" r="2" stroke="currentColor" stroke-width="1.5" />
-                    <circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="1.5" />
-                  </svg>
-                </div>
-                <h3 class="app-card-title">НАВІГАЦІЯ</h3>
+            <div class="card-body">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M3 12l9-9 9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
               </div>
-              <p class="app-card-desc">
-                Системи навігації дронів в темряві, без GPS.
-              </p>
+              <h3 class="card-title">НАВІГАЦІЯ</h3>
+              <p class="card-desc">Системи навігації дронів в темряві, без GPS.</p>
             </div>
           </article>
 
-          <!-- Card 3: Targeting -->
-          <article class="app-card">
-            <div class="app-card-media">
+          <article class="card">
+            <div class="card-image">
               <img src="assets/donavedenna.png" alt="Донаведення" />
             </div>
-            <div class="app-card-content">
-              <div class="app-card-header">
-                <div class="app-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
-                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" />
-                    <path d="M12 7v10M7 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                  </svg>
-                </div>
-                <h3 class="app-card-title">ДОНАВЕДЕННЯ</h3>
+            <div class="card-body">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
               </div>
-              <p class="app-card-desc">
-                Стабілізація модуль та точка збиття дронів Шахед.
-              </p>
+              <h3 class="card-title">ДОНАВЕДЕННЯ</h3>
+              <p class="card-desc">Стабілізація модуль та точка збиття дронів Шахед.</p>
             </div>
           </article>
         </div>
@@ -181,65 +148,61 @@
     <!-- Products Section -->
     <section class="section products" id="products">
       <div class="container">
-        <h2 class="section-title">НАШІ ПРОДУКТИ</h2>
+        <h2 class="section-heading section-heading--decorated">НАШІ ПРОДУКТИ</h2>
 
         <div class="products-grid">
-          <!-- Product 1 -->
-          <article class="product-card">
-            <div class="product-media">
+          <article class="product">
+            <div class="product-image">
               <img src="assets/products/product_1.png" alt="Програмне забезпечення Академія СтабХ" />
             </div>
-            <div class="product-info">
+            <div class="product-body">
               <h3 class="product-name">Програмне забезпечення<br>Академія СтабХ</h3>
               <p class="product-desc">Програма забезпечення для стабілізації звичайної оптики.</p>
-              <div class="product-price">
-                <span class="price-label">Ціна</span>
-                <span class="price-value">100 доларів</span>
+              <div class="product-footer">
+                <span class="product-label">Ціна</span>
+                <span class="product-price">100 доларів</span>
               </div>
             </div>
           </article>
 
-          <!-- Product 2 -->
-          <article class="product-card">
-            <div class="product-media">
+          <article class="product">
+            <div class="product-image">
               <img src="assets/products/product_2.png" alt="Денний модуль стабілізації" />
             </div>
-            <div class="product-info">
+            <div class="product-body">
               <h3 class="product-name">Денний модуль<br>стабілізації<br>Академія СтабХ</h3>
               <p class="product-desc">Стабілізаційний блок з липа для дронів, тепловів.</p>
-              <div class="product-price">
-                <span class="price-label">Ціна</span>
-                <span class="price-value">8000 грн</span>
+              <div class="product-footer">
+                <span class="product-label">Ціна</span>
+                <span class="product-price">8000 грн</span>
               </div>
             </div>
           </article>
 
-          <!-- Product 3 -->
-          <article class="product-card">
-            <div class="product-media">
+          <article class="product">
+            <div class="product-image">
               <img src="assets/products/product_3.png" alt="Нічний модуль стабілізації" />
             </div>
-            <div class="product-info">
+            <div class="product-body">
               <h3 class="product-name">Нічний модуль<br>стабілізації<br>Академія СтабХ</h3>
               <p class="product-desc">Універсал. нічний модуль, що сп. заміна модуля пнввоспос.</p>
-              <div class="product-price">
-                <span class="price-label">Ціна</span>
-                <span class="price-value">18000 грн</span>
+              <div class="product-footer">
+                <span class="product-label">Ціна</span>
+                <span class="product-price">18000 грн</span>
               </div>
             </div>
           </article>
 
-          <!-- Product 4 -->
-          <article class="product-card">
-            <div class="product-media">
+          <article class="product">
+            <div class="product-image">
               <img src="assets/products/product_4.png" alt="Універсальна платформа" />
             </div>
-            <div class="product-info">
-              <h3 class="product-name">Універсальна<br>стабілізаці<br>Академія СтабХ</h3>
+            <div class="product-body">
+              <h3 class="product-name">Універсальна<br>стабілізація<br>Академія СтабХ</h3>
               <p class="product-desc">Блок для стратегічної інтеграції у аналог продажів.</p>
-              <div class="product-price">
-                <span class="price-label">Оцінюється</span>
-                <a href="#contact" class="price-link">›</a>
+              <div class="product-footer">
+                <span class="product-label">Оцінюється</span>
+                <a href="#contact" class="product-link">›</a>
               </div>
             </div>
           </article>
@@ -250,10 +213,9 @@
     <!-- Partners Section -->
     <section class="section partners" id="partners">
       <div class="container">
-        <h2 class="section-title">Підрозділи які використовують наше рішення</h2>
-
-        <div class="partners-badges">
-          <img src="assets/military-badges.png" alt="Військові підрозділи" class="badges-img" />
+        <h2 class="section-heading">Підрозділи які використовують наше рішення</h2>
+        <div class="badges">
+          <img src="assets/military-badges.png" alt="Військові підрозділи" />
         </div>
       </div>
     </section>
@@ -261,24 +223,24 @@
     <!-- Footer -->
     <footer class="footer" id="contact">
       <div class="container">
-        <div class="footer-main">
+        <div class="footer-top">
           <div class="footer-location">
-            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
               <circle cx="12" cy="10" r="3"/>
             </svg>
             <span>87500 Україна, Київ</span>
           </div>
 
-          <nav class="footer-nav">
+          <nav class="footer-links">
             <a href="#">як замовити</a>
             <a href="#">оплата і доставка</a>
             <a href="#">обмін та повернення</a>
           </nav>
 
           <div class="footer-phone">
-            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
             <span>+38 044 338 2276</span>
           </div>
@@ -286,12 +248,12 @@
 
         <div class="footer-bottom">
           <div class="footer-social">
-            <a href="#" class="social-icon" aria-label="Telegram">
+            <a href="#" aria-label="Telegram">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
               </svg>
             </a>
-            <a href="mailto:info@anthrosavia.com" class="social-icon" aria-label="Email">
+            <a href="mailto:info@anthrosavia.com" aria-label="Email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="4" width="20" height="16" rx="2"/>
                 <path d="m22 6-10 7L2 6"/>
